@@ -41,6 +41,29 @@ sources:
       - name: businessentityaddress
         columns:
           - name: businessentityid
+      - name: product
+        columns:
+          - name: productid
+            tests:
+              - unique
+              - not_null
+      - name: creditcard
+        columns:
+          - name: creditcardid
+            tests:
+              - unique
+              - not_null
+      - name: salesreason
+        columns:
+          - name: salesreasonid
+            tests:
+              - unique
+              - not_null
+      - name: salesorderheadersalesreason
+
+              
+              
+              
               
               
               
