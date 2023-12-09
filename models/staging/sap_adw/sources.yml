@@ -31,6 +31,20 @@ sources:
             tests:
               - unique
               - not_null
+      - name: store
+        columns:
+          - name: businessentityid
+            tests:
+              - unique
+              - not_null
+
+      - name: businessentityaddress
+        columns:
+          - name: businessentityid
+              
+              
+              
+
               
                 
               
