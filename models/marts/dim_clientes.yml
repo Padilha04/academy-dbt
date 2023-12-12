@@ -8,10 +8,5 @@ models:
         tests:
           - unique
           - not_null
-      
-      - name: pessoa_id
-        description: Chave secundária da tabela pessoas. Existem campos nulos.
-        tests:
-          - unique
-        
+
           

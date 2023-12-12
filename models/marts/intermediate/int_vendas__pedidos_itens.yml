@@ -1,0 +1,9 @@
+models:
+  - name: int_vendas__pedidos_itens
+    description: Modelo intermediário para a construção da fato_vendas.
+    columns:
+      - name: detalhespedidovendas_id
+        description: Chave primária da tabela salesorderdetail.
+        tests:
+          - unique
+          - not_null
