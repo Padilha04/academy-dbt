@@ -10,9 +10,10 @@ with
     , join_tabelas_razoesvendas as (
         select
         razaodevenda.razaovenda_id
+        ,  headerrazaovenda.pedidovendas_id
         ,  razaodevenda.razaovenda_nome
         ,  razaodevenda.razaovenda_tipo
-        ,  headerrazaovenda.pedidovendas_id
+    
 
         from razaodevenda
         left join headerrazaovenda on razaodevenda.razaovenda_id = headerrazaovenda.razaovenda_id
@@ -20,3 +21,4 @@ with
 
 select *
 from join_tabelas_razoesvendas
+where pedidovendas_id is not null

@@ -1,9 +1,9 @@
 models:
-  - name: int_vendas__pedidos_itens
-    description: Modelo intermediário para a construção da fato_vendas.
+  - name: fct_vendas
+    description: Tabela de fato-vendas da AdventureWorks.
     columns:
       - name: detalhespedidovendas_id
-        description: Chave estrangeira dos detalhes dos pedidos.
+        description: Chave primária dos detalhes dos pedidos.
         tests:
           - unique
           - not_null    
@@ -18,14 +18,6 @@ models:
         tests:
           - not_null
 
-      - name: vendedor_id
-        description: Chave estrangeira do vendedor (aka loja).
-
-      - name: enderecocobranca_id
-        description: Chave estrangeira de endereço.
-        tests:
-          - not_null
-
       - name: produto_id
         description: Chave estrangeira do produto.
         tests:
@@ -33,6 +25,14 @@ models:
 
       - name: cartaocredito_id
         description: Chave estrangeira do cartão de crédito.
+
+      - name: vendedor_id
+        description: Chave estrangeira do vendedor (aka loja).
+
+      - name: enderecocobranca_id
+        description: Chave estrangeira de endereço.
+        tests:
+          - not_null
 
       - name: valor_total
         description: Valor total da compra.
@@ -68,5 +68,26 @@ models:
         description: Flag se diz se o pedido é online ou não. 
         tests:
           - not_null
+      
+      - name: total_bruto
+        description: Métrica calculada com o valor da quantidade do produto * o valor do produto. 
+        tests:
+          - not_null
+
+      - name: total_liquido
+        description: Métrica calculada com o valor da (quantidade do produto * o valor do produto) * (1 - desconto percentual dado no produto). 
+        tests:
+          - not_null
+
+      - name: valor_total_dividido_por_itens
+        description: Métrica calculada com o valor da coluna valor_total da compra dividido pelo número de itens no pedido.
+        tests:
+          - not_null
+
+      - name: endereco_da_venda_id
+        description: É o id endereço da venda, pois, se a venda é online, a coluna traz o endereço de cobrança do cliente e, se não é online, traz o endereço da loja onde foi feita a compra.
+        tests:
+          - not_null
+          
           
 

@@ -5,7 +5,7 @@ with
             cast(addressid as int) as endereco_id
             -- , addressline1
             -- , addressline2
-            , cast(city as string) as cidade
+            , cast(city as string) as cidade_nome
             , cast(stateprovinceid as int) as estado_id
             -- , postalcode
             -- , spatiallocation

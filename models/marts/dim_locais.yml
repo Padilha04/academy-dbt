@@ -1,0 +1,43 @@
+
+models:
+  - name: dim_locais
+    description: Dimensão de locais da Adventure Works.
+    columns:
+      - name: endereco_id
+        description: Chave estrangeira da tabela endereço.
+        tests:
+          - unique
+          
+      - name: estado_id
+        description: Chave estrangeira dos estados.
+        tests: 
+          - not_null
+          
+      
+      - name: territorio_id
+        description: Chave estrangeira do território (território não é país, pois o USA tem quatro territórios).
+        tests:
+          - not_null
+      
+      - name: cidade_nome
+        description: Coluna com o nome das cidades.
+        tests:
+          - not_null
+      
+      - name: estado_nome
+        description: Coluna com o nome dos estados.
+        tests:
+          - not_null
+      
+      - name: territorio_nome
+        description: Coluna com o nome dos territórios (território não é país, pois o USA tem quatro territórios).
+        tests:
+          - not_null
+
+      - name: pais_nome
+        description: Coluna com o nome dos países.
+        tests:
+          - not_null
+
+      
+

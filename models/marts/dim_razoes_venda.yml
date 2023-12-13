@@ -1,0 +1,27 @@
+
+models:
+  - name: dim_razoes_venda
+    description: Dimensão de razões de vendas.
+    columns:
+      - name: razaovenda_id
+        description: Chave estrangeira da razão de venda.
+        tests:
+          - not_null
+      
+      - name: pedidovendas_id
+        description: Chave estrangeira dos pedidos vendas.
+        tests:
+          - not_null
+      
+      - name: razaovenda_nome
+        description: Nome da razãod de venda.
+        tests:
+          - not_null
+      
+      - name: razaovenda_tipo
+        description: Tipo da razão de venda.
+        tests: 
+          - not_null
+          
+
+      
