@@ -14,7 +14,10 @@ with
         sap_customers.cliente_id
         , sap_customers.pessoa_id
         , sap_customers.loja_id
-        , sap_person.pessoa_nome_completo
+        , case 
+            when sap_customers.pessoa_id is null then cast("Cliente" || " " || cliente_id as string)
+            else pessoa_nome_completo
+        end as nome_do_cliente
         from sap_customers
         left join sap_person on sap_customers.pessoa_id = sap_person.pessoa_id
         )

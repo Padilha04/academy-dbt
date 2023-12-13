@@ -13,7 +13,6 @@ models:
         description: Chave estrangeira da tabela pessoas.
         tests:
           - unique
-          - not_null
       
       - name: loja_id
         description: Chave estrangeira da tabela lojas.
