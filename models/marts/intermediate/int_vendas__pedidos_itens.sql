@@ -15,10 +15,10 @@ with
         , pedido.pedidovendas_id
         , pedido.cliente_id
         , pedido.vendedor_id
-        , pedido.territorio_id
+        -- , pedido.territorio_id
         , pedido.enderecocobranca_id
         , pedido_itens.produto_id
-        , pedido_itens.ofertaespecial_id
+        -- , pedido_itens.ofertaespecial_id
         , pedido.cartaocredito_id
 
         , pedido.valor_total

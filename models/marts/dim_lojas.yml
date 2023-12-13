@@ -1,0 +1,17 @@
+
+models:
+  - name: dim_lojas
+    description: Dimensão de lojas da Adventure Works.
+    columns:
+      - name: vendedor_id
+        description: Chave estrangeira do ID do vendedor (aka loja).
+        tests:
+          - unique
+          - not_null
+      - name: endereco_id
+        description: Chave estrangeira do endereõ da loja.
+        tests:
+          - unique
+          - not_null
+          
+    

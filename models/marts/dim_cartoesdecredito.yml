@@ -1,0 +1,13 @@
+
+models:
+  - name: dim_cartoesdecredito
+    description: Dimensão de cartões de crédito da Adventure Works.
+    columns:
+      - name: cartaocredito_id
+        description: Chave primária da tabela cartões de crédito.
+        tests:
+          - unique
+          - not_null
+          
+      - name: cartaocredito_tipo
+        description: Coluna que indica o tipo do cartão de crédito.

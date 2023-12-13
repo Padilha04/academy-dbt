@@ -1,0 +1,30 @@
+
+models:
+  - name: dim_produtos
+    description: Dimensão de produtos da Adventure Works.
+    columns:
+      - name: produto_id
+        description: Chave primária da tabela produtos.
+        tests:
+          - unique
+          - not_null
+          
+      - name: produto_nome
+        description: Coluna com o nome do produto.
+        tests: 
+          - unique
+          - not_null
+          
+      
+      - name: preco_padrao
+        description: Preço padrão do produto.
+        tests:
+          - not_null
+      
+      - name: preco_lista
+        description: Preço de lista do produto.
+        tests:
+          - not_null
+
+      
+
